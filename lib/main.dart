@@ -19,9 +19,10 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       title: "Firebase Smaple",
+      // SendPageをChangeNotifierProviderでラップする
       home: ChangeNotifierProvider<SendModel>(
         create: (context) => SendModel(),
-        child: SendPage(''),
+        child: SendPage(''), // ()の中に''から文字を入れるとエラーが消える?
       ),
     );
   }
